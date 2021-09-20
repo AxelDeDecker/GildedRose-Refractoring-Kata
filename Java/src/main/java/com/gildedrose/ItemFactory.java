@@ -25,24 +25,19 @@ public class ItemFactory {
         // check for special items
         if (name.contains(AGED_BRIE)) {
             item = new AgedBrie(name, sellIn, quality);
-            System.out.println("brie");
         }
         else if (name.contains(BACKSTAGE_PASSES)) {
             item = new BackstagePasses(name, sellIn, quality);
-            System.out.println("passes");
         }
         else if (name.contains(SULFURAS)) {
             item = new Sulfuras(name, sellIn);
-            System.out.println("sulfuras");
         }
         else if (name.contains(CONJURED)) {
             item = new Conjured(name, sellIn, quality);
-            System.out.println("conjured");
         }
         // otherwise, create a standard item
         else {
             item = new Item(name, sellIn, quality);
-            System.out.println("standard");
         }
         return item;
     }
