@@ -1,6 +1,9 @@
 package com.gildedrose;
 
+import com.gildedrose.items.Item;
+
 class GildedRose {
+
     Item[] items;
 
     public GildedRose(Item[] items) {
@@ -8,6 +11,14 @@ class GildedRose {
     }
 
     public void updateQuality() {
+        for (Item item : items) {
+            item.updateQuality();
+        }
+    }
+
+    /*
+    // old code
+    public void updateQualityOld() {
         for (int i = 0; i < items.length; i++) {
             if (!items[i].name.equals("Aged Brie")
                     && !items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
@@ -59,4 +70,6 @@ class GildedRose {
             }
         }
     }
+     */
+
 }
