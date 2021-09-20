@@ -12,6 +12,12 @@ public class BackstagePasses extends Item {
         super(name, sellIn, quality);
     }
 
+    /*
+    The quality of a BackstagePasses item increases by 1 each day while there are 10 or more days left to sell it,
+    it increases by 2 if there are less than 10 days but more or equal to 5 days left to sell it,
+    it increases by 3 if there are less than 5 days to sell it. The quality can't get higher than the upper threshold.
+    If the deadline to sell the item has passed, the quality is set to the lower threshold.
+     */
     public void updateQuality() {
         this.sellIn -= 1;
         if (this.sellIn < 0) {

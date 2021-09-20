@@ -6,16 +6,18 @@ public class TexttestFixture {
     public static void main(String[] args) {
         System.out.println("OMGHAI!");
 
+        ItemFactory factory = new ItemFactory();
+
         Item[] items = new Item[] {
-                new Item("+5 Dexterity Vest", 10, 20), //
-                new AgedBrie("Aged Brie", 2, 0), //
-                new Item("Elixir of the Mongoose", 5, 7), //
-                new Sulfuras("Sulfuras, Hand of Ragnaros", 0), //
-                new Sulfuras("Sulfuras, Hand of Ragnaros", -1),
-                new BackstagePasses("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-                new BackstagePasses("Backstage passes to a TAFKAL80ETC concert", 10, 49),
-                new BackstagePasses("Backstage passes to a TAFKAL80ETC concert", 5, 49),
-                new Conjured("Conjured Mana Cake", 3, 6) };
+                factory.createItem("+5 Dexterity Vest", 10, 20), //
+                factory.createItem("Aged Brie", 2, 0), //
+                factory.createItem("Elixir of the Mongoose", 5, 7), //
+                factory.createItem("Sulfuras, Hand of Ragnaros", 0, 80), //
+                factory.createItem("Sulfuras, Hand of Ragnaros", -1, 80),
+                factory.createItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
+                factory.createItem("Backstage passes to a TAFKAL80ETC concert", 10, 49),
+                factory.createItem("Backstage passes to a TAFKAL80ETC concert", 5, 49),
+                factory.createItem("Conjured Mana Cake", 3, 6) };
 
         GildedRose app = new GildedRose(items);
 

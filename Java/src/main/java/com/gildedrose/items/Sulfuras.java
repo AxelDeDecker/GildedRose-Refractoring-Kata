@@ -14,6 +14,9 @@ public class Sulfuras extends Item {
         super(name, sellIn, MAX_QUALITY);
     }
 
+    /*
+    The quality of a Sulfuras item or the deadline to sell it never change.
+     */
     public void updateQuality() {
 
     }
