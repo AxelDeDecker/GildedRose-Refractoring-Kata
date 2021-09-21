@@ -1,6 +1,6 @@
 package com.gildedrose.items;
 
-public class Sulfuras extends Item {
+public class Sulfuras extends StandardItem {
 
     private final static String NAME = "Sulfuras, Hand of Ragnaros";
 

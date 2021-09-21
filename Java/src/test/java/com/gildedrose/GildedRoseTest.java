@@ -9,7 +9,7 @@ class GildedRoseTest {
 
     @Test
     void testStandardItem() {
-        Item[] items = new Item[] {new Item("Item 0", 1, 3)};
+        Item[] items = new Item[] {new StandardItem("Item 0", 1, 3)};
         GildedRose app = new GildedRose(items);
         // test if the quality of the item decreases by 1 if the deadline hasn't passed
         app.updateQuality();

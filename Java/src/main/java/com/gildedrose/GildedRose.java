@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-import com.gildedrose.items.Item;
+import com.gildedrose.items.StandardItem;
 
 class GildedRose {
 
@@ -12,7 +12,9 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            item.updateQuality();
+            if (item instanceof StandardItem) {
+                ((StandardItem) item).updateQuality();
+            }
         }
     }
 
